@@ -1,137 +1,110 @@
-# Decision Trees: A Comprehensive Guide in Python
+# Decision Trees
 
-[![GitHub Workflow Status](https://github.com/PartORG/ds-decision-tree/actions/workflows/workflow-02.yml/badge.svg?branch=main&event=workflow_dispatch)](https://github.com/PartORG/ds-decision-tree/actions/workflows/workflow-02.yml)
-[![Language](https://img.shields.io/github/languages/top/PartORG/ds-decision-tree?color=blue)](https://github.com/PartORG/ds-decision-tree)
-[![License](https://img.shields.io/github/license/PartORG/ds-decision-tree?color=green)](https://github.com/PartORG/ds-decision-tree/blob/main/LICENSE)
+In this repository, we explore the powerful Machine Learning algorithm called Decision Tree using Python. This project is designed to help you understand how to implement and utilize Decision Trees for both regression and classification tasks.
 
-## Introduction
+## The Way to Success:
 
-Welcome to the Decision Trees repository! This project is designed to help you understand and implement Decision Tree algorithms in Python using scikit-learn. Whether you're a beginner or an experienced data scientist, this guide will provide you with a solid foundation in decision tree concepts and practical implementation.
+Please work together as **Pair-Programmers** through all the notebooks in this particular order:
 
-### What It Does
-This repository contains three Jupyter notebooks that cover the basics of decision trees:
-1. **Decision Trees Regression**: Learn how to implement decision trees for regression problems.
-2. **Decision Trees Classification**: Apply decision trees to classification tasks.
-3. **Decision Trees Recap**: Summarize key concepts and provide a deeper dive into decision tree algorithms.
+1. [Decision Trees Regression](1_Decision_Trees_Visualization.ipynb)
+2. [Decision Trees Classification](2_Decision_Trees_Classification.ipynb)
+3. [Decision Trees Recap](3_Decision_Trees_Recap.ipynb)
 
-### Why It Exists
-The primary goal of this project is to make decision trees accessible and understandable through practical examples. By working through these notebooks, you'll gain hands-on experience with decision trees and develop a strong foundation in machine learning.
+The first notebook will show you how to implement Decision Trees on a regression problem with scikit-learn. In the second notebook, you will use the algorithm on a classification problem. The third notebook recapitulates everything you have learned so far about Decision Trees and provides additional insights from a blog post.
 
-### Who Is It For?
-This guide is ideal for:
-- Data scientists looking to deepen their understanding of decision trees.
-- Machine learning enthusiasts who want to implement decision trees in Python.
-- Students studying data science or machine learning.
+## Objectives
 
-### What Problem Does It Solve?
-Decision Trees are widely used in various applications, including:
-- Predictive analytics
-- Fraud detection
-- Customer segmentation
-- Risk assessment
+At the end of the notebooks, you should:
 
-This repository provides a step-by-step approach to implementing and understanding decision trees, making it easier for anyone to apply these techniques in real-world scenarios.
+- Know how to implement Decision Trees (both classifier and regressor trees) with scikit-learn.
+- Know how to plot Decision Trees.
+- Understand different splitting criteria for Decision Trees (Gini and Entropy) and how splitting decisions are made while growing the tree.
+- Be able to briefly explain the Decision Tree Algorithm to a colleague.
+- Know about the advantages and disadvantages of Decision Trees.
+- Understand typical terminology (node, stump, leaf, threshold).
+- Recap how to write and document functions (regarding length and using doc strings).
+- Recap the different steps during a Machine Learning project.
 
-## How It Works
+## Installation
 
-### Architecture Overview
-The project consists of three Jupyter notebooks that follow a sequential learning path:
-1. **Decision Trees Regression**: Focuses on regression problems.
-2. **Decision Trees Classification**: Covers classification tasks.
-3. **Decision Trees Recap**: Summarizes key concepts and provides additional insights.
+Please make sure you have forked the repo and set up a new virtual environment. For this purpose, you can use the following commands:
 
-Each notebook includes practical examples, code snippets, and explanations to help you understand the underlying concepts.
+The added [requirements file](requirements.txt) contains all libraries and dependencies we need to execute the Decision Trees notebooks.
 
-### Technology Stack
-| Technology | Purpose |
-|------------|---------|
-| Jupyter Notebook | Interactive environment for data analysis and visualization. |
-| scikit-learn | Machine learning library in Python. |
-| matplotlib & seaborn | Libraries for data visualization. |
-| numpy & pandas | Libraries for numerical and data manipulation. |
+### **`macOS`** type the following commands :
+
+- Install the virtual environment and the required packages by following commands:
+
+    ```BASH
+    pyenv local 3.11.3
+    python -m venv .venv
+    source .venv/bin/activate
+    pip install --upgrade pip
+    pip install -r requirements.txt
+    ```
+### **`WindowsOS`** type the following commands :
+
+- Install the virtual environment and the required packages by following commands.
+
+   For `PowerShell` CLI :
+
+    ```PowerShell
+    pyenv local 3.11.3
+    python -m venv .venv
+    .venv\Scripts\Activate.ps1
+    python -m pip install --upgrade pip
+    pip install -r requirements.txt
+    ```
+
+    For `Git-Bash` CLI :
+  
+    ```BASH
+    pyenv local 3.11.3
+    python -m venv .venv
+    source .venv/Scripts/activate
+    python -m pip install --upgrade pip
+    pip install -r requirements.txt
+    ```
+     **`Note:`**
+    If you encounter an error when trying to run `pip install --upgrade pip`, try using the following command:
+
+    ```Bash
+    python.exe -m pip install --upgrade pip
+    ```
+
+## Data
+
+The dataset for the notebook is stored in the `data.zip` folder. To unzip the data folder directly in the terminal, run:
+
+```sh
+unzip data.zip
+```
 
 ## Requirements
 
-To run the notebooks, you need to have Python installed on your system. The required packages are listed in the `requirements.txt` file.
-
-### Installation
-
-#### macOS
-```bash
-pyenv local 3.11.3
-python -m venv .venv
-source .venv/bin/activate
-pip install --upgrade pip
-pip install -r requirements.txt
-```
-
-#### WindowsOS (PowerShell)
-```powershell
-pyenv local 3.11.3
-python -m venv .venv
-.venv\Scripts\Activate.ps1
-python -m pip install --upgrade pip
-pip install -r requirements.txt
-```
-
-#### WindowsOS (Git-Bash)
-```bash
-pyenv local 3.11.3
-python -m venv .venv
-source .venv/Scripts/activate
-python -m pip install --upgrade pip
-pip install -r requirements.txt
-```
-
-If you encounter an error during environment setup, try removing the versions from the failing packages in the `requirements.txt` file.
-
-## Configuration
-
-No specific configuration is required for this project. Ensure that your virtual environment is activated before running the notebooks.
+| Technology | Purpose |
+|------------|---------|
+| Jupyter Notebook | Interactive environment for running Python code and visualizing results. |
+| Matplotlib | For creating static, animated, and interactive visualizations in Python. |
+| Seaborn | Based on matplotlib, it provides a high-level interface for drawing attractive statistical graphics. |
+| NumPy | Fundamental package for scientific computing with Python. |
+| Pandas | Provides data structures and operations for manipulating numerical tables and time series. |
+| scikit-learn | Simple and efficient tools for predictive data analysis built on NumPy, SciPy, and matplotlib. |
 
 ## Quick Start
 
-1. Fork and clone the repository.
-2. Set up a new virtual environment as described above.
-3. Activate the virtual environment.
-4. Install the required packages using `pip install -r requirements.txt`.
-5. Unzip the data folder by running `unzip data.zip`.
-6. Open the Jupyter notebooks in sequence (`1_Decision_Trees_Visualization.ipynb`, `2_Decision_Trees_Classification.ipynb`, and `3_Decision_Trees_Recap.ipynb`).
+1. Fork the repository.
+2. Set up a virtual environment as described in the "Installation" section.
+3. Unzip the `data.zip` file.
+4. Open the notebooks in Jupyter Notebook.
 
 ## Usage
 
-Each notebook provides detailed instructions on how to implement decision trees for regression and classification tasks. Key concepts such as splitting criteria (Gini and Entropy), node terminology, and function documentation are covered.
-
-### Example Commands
-```python
-# Import necessary libraries
-import pandas as pd
-from sklearn.tree import DecisionTreeRegressor
-from sklearn.model_selection import train_test_split
-
-# Load data
-data = pd.read_csv('data.csv')
-
-# Split data into features and target
-X = data.drop('target', axis=1)
-y = data['target']
-
-# Split data into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-# Create a decision tree regressor
-model = DecisionTreeRegressor()
-
-# Train the model
-model.fit(X_train, y_train)
-
-# Make predictions
-predictions = model.predict(X_test)
-```
+To run the notebooks, simply open them in Jupyter Notebook and execute the cells sequentially.
 
 ## Project Structure
 
-```plaintext
+```
 ds-decision-tree/
 ├── .github/workflows/
 │   ├── REGX_test_import_libraries.sh
@@ -156,21 +129,8 @@ ds-decision-tree/
 
 ## Development
 
-This project is open-source and welcomes contributions. If you find any issues or have suggestions for improvements, please feel free to submit a pull request.
-
-## Testing
-
-No tests are currently available for this project.
-
-## Limitations
-
-- The repository assumes basic knowledge of Python and machine learning concepts.
-- No advanced optimization techniques are covered in the notebooks.
+Pair-programming is required to work through the notebooks in a specific order. The first notebook covers regression, the second classification, and the third recapitulates learning with additional insights from a blog post.
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
-
----
-
-Thank you for using the Decision Trees repository! If you have any questions or need further assistance, feel free to reach out.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
